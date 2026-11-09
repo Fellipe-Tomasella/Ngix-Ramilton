@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste do Nginx</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Teste de balanceamento com Nginx</h1>
+    <p>Esta página é entregue pelo Nginx. Os botões fazem requisições para <code>/api/info</code>, e o Nginx escolhe qual servidor vai responder.</p>
+
+    <div class="botoes">
+      <button id="uma">Enviar 1 requisição</button>
+      <button id="dez">Enviar 10 requisições</button>
+      <button id="limpar">Limpar</button>
+    </div>
+
+    <div class="contadores">
+      <div class="caixa">
+        <h2>Servidor 1</h2>
+        <span id="total1">0</span>
+      </div>
+      <div class="caixa">
+        <h2>Servidor 2</h2>
+        <span id="total2">0</span>
+      </div>
+      <div class="caixa">
+        <h2>Erros</h2>
+        <span id="erros">0</span>
+      </div>
+    </div>
+
+    <h2>Histórico</h2>
+    <ul id="historico"></ul>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
